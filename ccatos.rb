@@ -5,56 +5,56 @@
 class Ccatos < Formula
   desc "cat on steroids."
   homepage ""
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/batmac/ccat/releases/download/v1.2.0/ccat-1.2.0-darwin-arm64.tar.gz"
-      sha256 "70cf185c6b396cbe8588d54d1d155039ff349821cc8bbf202d1cea7c37619b8c"
+      url "https://github.com/batmac/ccat/releases/download/v1.3.0/ccat-1.3.0-darwin-arm64.tar.gz"
+      sha256 "899f3a649c768384351ee03a6cb8f93086da0fe1ffdfcc69923ded9cdeef4ddb"
 
       def install
         bin.install "ccat"
-        (bash_completion/"ccat").write `#{bin}/ccat --completion bash`
+        (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/batmac/ccat/releases/download/v1.2.0/ccat-1.2.0-darwin-amd64.tar.gz"
-      sha256 "9a1e128190602ca28fe64a7fd6b8f55a798e0b1335ae279516f0af7c16a610a2"
+      url "https://github.com/batmac/ccat/releases/download/v1.3.0/ccat-1.3.0-darwin-amd64.tar.gz"
+      sha256 "b48a0163f9ae536f4464a6f1b465d9ec1890144b982090b43d5a2b42ad44132e"
 
       def install
         bin.install "ccat"
-        (bash_completion/"ccat").write `#{bin}/ccat --completion bash`
+        (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/batmac/ccat/releases/download/v1.2.0/ccat-1.2.0-linux-armv6.tar.gz"
-      sha256 "030b59c67c3a6c7e50d5d1276eadcbfb4edd5c40171c96f1f5e7365b53b8c23e"
+      url "https://github.com/batmac/ccat/releases/download/v1.3.0/ccat-1.3.0-linux-armv6.tar.gz"
+      sha256 "753e9ef477c89ab7afe4edefcfa7b8dc792a19b57b8c57a651e070e91e92a9f0"
 
       def install
         bin.install "ccat"
-        (bash_completion/"ccat").write `#{bin}/ccat --completion bash`
+        (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/batmac/ccat/releases/download/v1.2.0/ccat-1.2.0-linux-arm64.tar.gz"
-      sha256 "c0b113d346cb6709697e385374e8d4b769d0a6f6e6ce1dc734f3d88d5af6b088"
+      url "https://github.com/batmac/ccat/releases/download/v1.3.0/ccat-1.3.0-linux-arm64.tar.gz"
+      sha256 "495d1c441a33c2699a7420371db9fc4486606b8e248b0a8e300aeef5b5445581"
 
       def install
         bin.install "ccat"
-        (bash_completion/"ccat").write `#{bin}/ccat --completion bash`
+        (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/batmac/ccat/releases/download/v1.2.0/ccat-1.2.0-linux-amd64.tar.gz"
-      sha256 "de6dcc716072818fa366ed9495598885a26e51ffb5ca883a164e14776bfc954d"
+      url "https://github.com/batmac/ccat/releases/download/v1.3.0/ccat-1.3.0-linux-amd64.tar.gz"
+      sha256 "ab1a5c59731226629d02af6d2c7340c8f59587d553ce2a352d747bdd7f17aa93"
 
       def install
         bin.install "ccat"
-        (bash_completion/"ccat").write `#{bin}/ccat --completion bash`
+        (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
       end
     end
   end
