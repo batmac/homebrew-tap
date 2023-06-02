@@ -5,13 +5,13 @@
 class Ccatos < Formula
   desc "cat on steroids."
   homepage ""
-  version "1.12.0"
+  version "1.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/batmac/ccat/releases/download/v1.12.0/ccat-1.12.0-darwin-arm64.tar.gz"
-      sha256 "6af6928bc3f5a76e01a964061fea6ec09b1e03fb018c6c929890ceb85ec9363d"
+      url "https://github.com/batmac/ccat/releases/download/v1.13.0/ccat-1.13.0-darwin-arm64.tar.gz"
+      sha256 "7120730ddaebb19de0c86d563c10e4c6ca54d110b268ebdebf4f58f3032160bc"
 
       def install
         bin.install "ccat"
@@ -19,8 +19,8 @@ class Ccatos < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/batmac/ccat/releases/download/v1.12.0/ccat-1.12.0-darwin-amd64.tar.gz"
-      sha256 "16f061891605a12a7eaee56359aa5bcf61ff6386b69030e850f4f153ea641d98"
+      url "https://github.com/batmac/ccat/releases/download/v1.13.0/ccat-1.13.0-darwin-amd64.tar.gz"
+      sha256 "df707ec32e57fe23d312f114c002d46a3dbd03a82409355d15c1f18e43c74070"
 
       def install
         bin.install "ccat"
@@ -31,8 +31,8 @@ class Ccatos < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/batmac/ccat/releases/download/v1.12.0/ccat-1.12.0-linux-armv6.tar.gz"
-      sha256 "b1d8e1b7835d8cd275a9e904596013049b1a180091cbfeae44f7191eaefad163"
+      url "https://github.com/batmac/ccat/releases/download/v1.13.0/ccat-1.13.0-linux-armv6.tar.gz"
+      sha256 "05f23547c76b02c3ae1891334bb0368eb892af0e55646070a3b50cd2a4fbb5ba"
 
       def install
         bin.install "ccat"
@@ -40,8 +40,8 @@ class Ccatos < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/batmac/ccat/releases/download/v1.12.0/ccat-1.12.0-linux-arm64.tar.gz"
-      sha256 "2fc8603d7fdaea7270cc5f89a39507d7436ebb26c6af3bcf601246f3831127e1"
+      url "https://github.com/batmac/ccat/releases/download/v1.13.0/ccat-1.13.0-linux-arm64.tar.gz"
+      sha256 "0d7c1a7be724b268cab3a60604e116794e64283430ab37f8358e6dd7b913fa26"
 
       def install
         bin.install "ccat"
@@ -49,8 +49,8 @@ class Ccatos < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/batmac/ccat/releases/download/v1.12.0/ccat-1.12.0-linux-amd64.tar.gz"
-      sha256 "d27f7904f0575cc2cdcce4cbfc1c699034a16756e5e186b083527957f5c0b85c"
+      url "https://github.com/batmac/ccat/releases/download/v1.13.0/ccat-1.13.0-linux-amd64.tar.gz"
+      sha256 "0d99dec19c5083b12fb4ed204ff177d83ec2902c8a657759112e444ab0fb36f7"
 
       def install
         bin.install "ccat"
