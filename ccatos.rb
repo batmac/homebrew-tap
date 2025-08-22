@@ -11,7 +11,7 @@ class Ccatos < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/batmac/ccat/releases/download/v1.20.1/ccat-1.20.1-darwin-amd64.tar.gz"
-      sha256 "53ef591f84745d66aa46508e5858b9a9535983d5552d73f39bb53cc6e54111bf"
+      sha256 "76667059da478f5cc5b7d4582c930c18fe070864825d025da30a6d0764ca6dfd"
 
       def install
         bin.install "ccat"
@@ -20,7 +20,7 @@ class Ccatos < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/batmac/ccat/releases/download/v1.20.1/ccat-1.20.1-darwin-arm64.tar.gz"
-      sha256 "bb9de3e0b007d95735ba905a887cc8137a04926ac11cef49e35de1ce431615df"
+      sha256 "11fc0b55a72b79f8d38a16b602e780cd12ee09375e695fee672ce8fd1b4a14c1"
 
       def install
         bin.install "ccat"
@@ -32,7 +32,7 @@ class Ccatos < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/batmac/ccat/releases/download/v1.20.1/ccat-1.20.1-linux-amd64.tar.gz"
-      sha256 "70135d7b7774f9d7e3ed543e271a3aed1a15e680922ef06370e3a63d35994035"
+      sha256 "700da0b08909492c7ffccad0d21d3edd646d1504651fb2ec5dda19a8c9082b0c"
       def install
         bin.install "ccat"
         (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
@@ -40,7 +40,7 @@ class Ccatos < Formula
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
       url "https://github.com/batmac/ccat/releases/download/v1.20.1/ccat-1.20.1-linux-armv6.tar.gz"
-      sha256 "6c3994f0ed60ce1bed95082b36fd9a8e659f3d1b6cb935ff0a1e3d1ff36b2f8c"
+      sha256 "6c3423f7da7cc22883e4d376e92bf05be3333b9b9983ee8cc530512556ae655a"
       def install
         bin.install "ccat"
         (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
@@ -48,7 +48,7 @@ class Ccatos < Formula
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/batmac/ccat/releases/download/v1.20.1/ccat-1.20.1-linux-arm64.tar.gz"
-      sha256 "fb64107f635c96777fed8177dda35e049d96c6ac12b70810944953b77f5587ae"
+      sha256 "3e24111094efa691ec95b222e1656f2fea87ec714ba7e4c712a3793803d94300"
       def install
         bin.install "ccat"
         (bash_completion/"ccatos").write `#{bin}/ccat --completion bash`
